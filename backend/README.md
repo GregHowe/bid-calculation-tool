@@ -58,11 +58,14 @@ http://localhost:5000/api/fees/calculate
 
 POST /api/fees/calculate
 
-Request Body:
+### Example Request Body
+
+```json
 {
   "price": 1000,
   "type": "Common"
 }
+
 
 Response:
 {
