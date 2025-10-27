@@ -65,7 +65,7 @@ POST /api/fees/calculate
   "price": 1000,
   "type": "Common"
 }
-
+```
 
 Response:
 {
