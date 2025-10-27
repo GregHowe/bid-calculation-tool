@@ -85,21 +85,23 @@ it('resetFees sets all fees to 0 except storageFee', async () => {
   expect(wrapper.vm.totalCost).toBe(0)
 })
 
-it('integration: calculates and renders fees after user input', async () => {
-  const wrapper = mount(FeeCalculator)
+describe('Integration', () => {
+  it('calculates and renders fees after user input', async () => {
+    const wrapper = mount(FeeCalculator)
 
-  const priceInput = wrapper.find('input#price')
-  const typeSelect = wrapper.find('select#type')
+    const priceInput = wrapper.find('input#price')
+    const typeSelect = wrapper.find('select#type')
 
-  await priceInput.setValue(1000)
-  await typeSelect.setValue('Common')
+    await priceInput.setValue(1000)
+    await typeSelect.setValue('Common')
 
-  // Esperar a que se actualice
-  await new Promise(resolve => setTimeout(resolve, 500))
+    await new Promise(resolve => setTimeout(resolve, 500))
 
-  expect(wrapper.text()).toContain('Basic Fee')
-  expect(wrapper.text()).toContain('Total: 1180.00')
+    expect(wrapper.text()).toContain('Basic Fee')
+    expect(wrapper.text()).toContain('Total: 1180.00')
+  })
 })
+
 
 
 
