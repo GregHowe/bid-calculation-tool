@@ -58,7 +58,7 @@ http://localhost:5000/api/fees/calculate
 
 POST `/api/fees/calculate`
 
-### Example Request Body
+Request:
 
 ```json
 {
@@ -68,6 +68,7 @@ POST `/api/fees/calculate`
 ```
 
 Response:
+```json
 {
   "basicFee": 50,
   "specialFee": 20,
@@ -75,6 +76,7 @@ Response:
   "storageFee": 100,
   "total": 1180
 }
+```
 
 🧪 Running Unit Tests
 cd backend/BidCalculator.Tests
