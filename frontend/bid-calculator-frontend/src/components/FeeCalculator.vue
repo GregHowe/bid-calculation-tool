@@ -2,11 +2,11 @@
   <div class="fee-calculator">
     <label for="price">Vehicle Price:</label>
     <input
-      type="number"
-      id="price"
-      v-model="vehiclePrice"
-      min="1"
-      placeholder="Enter price"
+    type="number"
+    id="price"
+    v-model="vehiclePrice"
+    min="1"
+    placeholder="Enter price"
     />
 
     <label for="type">Vehicle Type:</label>
@@ -50,7 +50,7 @@ const feesReady = computed(() =>
 )
 
 watch([vehiclePrice, vehicleType], async () => {
-  if (!feesReady.value) {
+  if (!feesReady.value || vehiclePrice.value! < 1) {
     resetFees()
     return
   }
@@ -88,6 +88,15 @@ async function calculateFees() {
     resetFees()
   }
 }
+
+function preventNegative(event: Event) {
+  const input = event.target as HTMLInputElement
+  if (Number(input.value) < 1) {
+    input.value = ''
+    vehiclePrice.value = null
+  }
+}
+
 </script>
 
 <style scoped>
