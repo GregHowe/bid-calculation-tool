@@ -43,7 +43,7 @@ The total cost includes:
 - [.NET SDK 7.0+](https://dotnet.microsoft.com/download)
 - Visual Studio or Visual Studio Code
 
-### ▶️ Start the API
+## ▶️ Start the API
 
 bash
 cd backend/BidCalculator.API
@@ -54,7 +54,7 @@ dotnet run
 The API will be available at: 
 http://localhost:5000/api/fees/calculate
 
-### 📬 API Endpoint
+## 📬 API Endpoint
 
 POST /api/fees/calculate
 
