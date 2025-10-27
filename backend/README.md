@@ -54,7 +54,7 @@ dotnet run
 The API will be available at: 
 http://localhost:5000/api/fees/calculate
 
-📬 API Endpoint
+### 📬 API Endpoint
 
 POST /api/fees/calculate
 
@@ -77,7 +77,7 @@ Response:
 cd backend/BidCalculator.Tests
 dotnet test
 
-Test Coverage
+### Test Coverage
 
     ✅ FeeCalculatorService integration tests
 
@@ -86,7 +86,7 @@ Test Coverage
     ✅ Edge cases (min/max fees, price thresholds)
 
 
-📸 Screenshots
+### 📸 Screenshots
 
     These screenshots demonstrate the backend in action using .http files in Visual Studio Code.
 
@@ -96,7 +96,7 @@ Test Coverage
 
 
 
-🛠 Technologies Used
+### 🛠 Technologies Used
 
     ASP.NET Core Web API
 
@@ -109,7 +109,7 @@ Test Coverage
     FluentAssertions
 
 
-📁 Repository
+### 📁 Repository
 
 GitHub: 
     https://github.com/GregHowe/bid-calculation-tool
