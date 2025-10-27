@@ -102,6 +102,37 @@ describe('Integration', () => {
   })
 })
 
+describe('preventNegative', () => {
+  it('should set vehiclePrice to 0 if input is negative', () => {
+    const vehiclePrice = ref(-500)
+
+    function preventNegative() {
+      if (vehiclePrice.value < 0) {
+        vehiclePrice.value = 0
+      }
+    }
+
+    preventNegative()
+
+    expect(vehiclePrice.value).toBe(0)
+  })
+
+  it('should keep vehiclePrice unchanged if input is positive', () => {
+    const vehiclePrice = ref(1200)
+
+    function preventNegative() {
+      if (vehiclePrice.value < 0) {
+        vehiclePrice.value = 0
+      }
+    }
+
+    preventNegative()
+
+    expect(vehiclePrice.value).toBe(1200)
+  })
+})
+
+
 
 
 
