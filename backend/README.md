@@ -77,7 +77,7 @@ Response:
 cd backend/BidCalculator.Tests
 dotnet test
 
-### Test Coverage
+## Test Coverage
 
     ✅ FeeCalculatorService integration tests
 
@@ -86,7 +86,7 @@ dotnet test
     ✅ Edge cases (min/max fees, price thresholds)
 
 
-### 📸 Screenshots
+## 📸 Screenshots
 
     These screenshots demonstrate the backend in action using .http files in Visual Studio Code.
 
@@ -96,7 +96,7 @@ dotnet test
 
 
 
-### 🛠 Technologies Used
+## 🛠 Technologies Used
 
     ASP.NET Core Web API
 
@@ -109,7 +109,7 @@ dotnet test
     FluentAssertions
 
 
-### 📁 Repository
+## 📁 Repository
 
 GitHub: 
     https://github.com/GregHowe/bid-calculation-tool
