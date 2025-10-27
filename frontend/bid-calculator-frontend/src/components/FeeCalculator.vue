@@ -1,31 +1,26 @@
 <template>
   <div class="fee-calculator">
+    
     <label for="price">Vehicle Price:</label>
-    <input
-    type="number"
-    id="price"
-    v-model="vehiclePrice"
-    min="1"
-    placeholder="Enter price"
-    />
+    <input type="number" id="price" v-model="vehiclePrice" min="1" placeholder="Enter price" />
+    <p v-if="vehiclePriceError" class="error-message">Enter a valid price.</p>
 
     <label for="type">Vehicle Type:</label>
-    <select id="type" v-model="vehicleType">
+    <select id="type" v-model="vehicleType" >
       <option disabled value="" selected>Select type</option>
       <option value="Common">Common</option>
       <option value="Luxury">Luxury</option>
     </select>
+    <p v-if="vehicleTypeError" class="error-message">Select a vehicle type.</p>
 
     <div v-if="feesReady">
-      <FeeItem label="Basic Fee" :value="basicFee" />
-      <FeeItem label="Special Fee" :value="specialFee" />
-      <FeeItem label="Association Fee" :value="associationFee" />
-      <FeeItem label="Storage Fee" :value="storageFee" />
-      <p><strong>Total: {{ totalCost.toFixed(2) }}</strong></p>
-    </div>
+        <FeeItem label="Basic Fee" :value="basicFee" />
+        <FeeItem label="Special Fee" :value="specialFee" />
+        <FeeItem label="Association Fee" :value="associationFee" />
+        <FeeItem label="Storage Fee" :value="storageFee" />
+        <p class="success-message">Fees calculated successfully!</p>
 
-    <div  v-else-if="touched">
-        <p class="error-message">Please enter a valid price and select a vehicle type.</p>
+        <p class="total"><strong>Total: {{ totalCost.toFixed(2) }}</strong></p>
     </div>
   </div>
 </template>
@@ -37,6 +32,7 @@ import FeeItem from './FeeItem.vue'
 const touched = ref(false)
 const vehiclePrice = ref<number | null>(null)
 const vehicleType = ref<'Common' | 'Luxury' | ''>('')  
+const isLoading = ref(false)
 
 const basicFee = ref(0)
 const specialFee = ref(0)
@@ -56,8 +52,9 @@ watch([vehiclePrice, vehicleType], async () => {
     resetFees()
     return
   }
-
+  isLoading.value = true
   await calculateFees()
+  isLoading.value = false
 })
 
 function resetFees() {
@@ -91,13 +88,13 @@ async function calculateFees() {
   }
 }
 
-function preventNegative(event: Event) {
-  const input = event.target as HTMLInputElement
-  if (Number(input.value) < 1) {
-    input.value = ''
-    vehiclePrice.value = null
-  }
-}
+const vehiclePriceError = computed(() =>
+  touched.value && (vehiclePrice.value === null || vehiclePrice.value < 1)
+)
+
+const vehicleTypeError = computed(() =>
+  touched.value && vehicleType.value === ''
+)
 
 </script>
 
@@ -133,10 +130,13 @@ p {
   margin: 0.5rem 0;
 }
 .error-message {
-  color: #ff3333;
-  font-weight: bold;
-  margin-top: 1rem;
+  background-color: #ffe6e6;
+  border: 1px solid #ff3333;
+  padding: 0.5rem;
+  border-radius: 4px;
+  color:red;
 }
+
 
 
 .total {
@@ -145,6 +145,15 @@ p {
   border-radius: 4px;
   font-weight: bold;
   color: #004488;
+}
+
+.success-message {
+  background-color: #e8f5e9;
+  border: 1px solid #81c784;
+  padding: 0.5rem;
+  border-radius: 4px;
+  color: #2e7d32;
+  margin-top: 1rem;
 }
 
 </style>

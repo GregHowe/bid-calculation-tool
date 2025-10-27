@@ -1,5 +1,7 @@
 import { describe, it, expect } from 'vitest'
 import { computed, ref } from 'vue'
+import { mount } from '@vue/test-utils'
+import FeeCalculator from '../../src/components/FeeCalculator.vue'
 
 describe('FeeCalculator logic', () => {
   it('feesReady should be true when price > 0 and type is set', () => {
@@ -51,6 +53,54 @@ describe('resetFees', () => {
     expect(totalCost.value).toBe(0)
   })
 })
+
+describe('FeeCalculator.vue', () => {
+  it('feesReady is false when inputs are empty', () => {
+    const wrapper = mount(FeeCalculator)
+    expect(wrapper.vm.feesReady).toBe(false)
+  })
+
+    it('feesReady is true when valid inputs are set', async () => {
+        const wrapper = mount(FeeCalculator)
+        wrapper.vm.vehiclePrice = 1000
+        wrapper.vm.vehicleType = 'Common'
+        await wrapper.vm.$nextTick()
+
+        expect(wrapper.vm.feesReady).toBe(true)
+    })
+})
+
+it('resetFees sets all fees to 0 except storageFee', async () => {
+  const wrapper = mount(FeeCalculator)
+  wrapper.vm.basicFee = 10
+  wrapper.vm.specialFee = 20
+  wrapper.vm.associationFee = 30
+  wrapper.vm.totalCost = 1000
+
+  wrapper.vm.resetFees()
+
+  expect(wrapper.vm.basicFee).toBe(0)
+  expect(wrapper.vm.specialFee).toBe(0)
+  expect(wrapper.vm.associationFee).toBe(0)
+  expect(wrapper.vm.totalCost).toBe(0)
+})
+
+it('integration: calculates and renders fees after user input', async () => {
+  const wrapper = mount(FeeCalculator)
+
+  const priceInput = wrapper.find('input#price')
+  const typeSelect = wrapper.find('select#type')
+
+  await priceInput.setValue(1000)
+  await typeSelect.setValue('Common')
+
+  // Esperar a que se actualice
+  await new Promise(resolve => setTimeout(resolve, 500))
+
+  expect(wrapper.text()).toContain('Basic Fee')
+  expect(wrapper.text()).toContain('Total: 1180.00')
+})
+
 
 
 
