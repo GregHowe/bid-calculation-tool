@@ -1,5 +1,7 @@
-import { DEFAULT_STORAGE_FEE } from '../config/fees'
 import { ref } from 'vue'
+
+const API_URL = import.meta.env.VITE_API_URL
+const DEFAULT_STORAGE_FEE = Number(import.meta.env.VITE_STORAGE_FEE)
 
 export function useFeeCalculator() {
   const basicFee = ref(0)
@@ -10,8 +12,8 @@ export function useFeeCalculator() {
 
   async function calculateFees(vehiclePrice: number, vehicleType: string) {
     try {
-      const response = await fetch('http://localhost:5120/api/FeeCalculator', {
-        method: 'POST', 
+      const response = await fetch(`${API_URL}/FeeCalculator`, {
+        method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ price: vehiclePrice, type: vehicleType })
       })
