@@ -24,7 +24,7 @@
       <p><strong>Total: {{ totalCost.toFixed(2) }}</strong></p>
     </div>
 
-    <div v-else>
+    <div  v-else-if="touched">
         <p class="error-message">Please enter a valid price and select a vehicle type.</p>
     </div>
   </div>
@@ -34,6 +34,7 @@
 import { ref, computed, watch } from 'vue'
 import FeeItem from './FeeItem.vue'
 
+const touched = ref(false)
 const vehiclePrice = ref<number | null>(null)
 const vehicleType = ref<'Common' | 'Luxury' | ''>('')  
 
@@ -50,6 +51,7 @@ const feesReady = computed(() =>
 )
 
 watch([vehiclePrice, vehicleType], async () => {
+     touched.value = true
   if (!feesReady.value || vehiclePrice.value! < 1) {
     resetFees()
     return
