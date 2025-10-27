@@ -25,7 +25,7 @@
     </div>
 
     <div v-else>
-      <p>Please enter a valid price and select a vehicle type.</p>
+        <p class="error-message">Please enter a valid price and select a vehicle type.</p>
     </div>
   </div>
 </template>
@@ -118,4 +118,10 @@ select {
 p {
   margin: 0.5rem 0;
 }
+.error-message {
+  color: #ff3333;
+  font-weight: bold;
+  margin-top: 1rem;
+}
+
 </style>
