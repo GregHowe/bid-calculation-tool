@@ -101,6 +101,7 @@ dotnet test
 |--------------|---------------|
 | `POST /api/fees/calculate`<br>Body:<br>`{ "price": 1000, "type": "Common" }` | `{ "basicFee": 50, "specialFee": 20, "associationFee": 10, "storageFee": 100, "total": 1180 }` |
 
+!HttpTesting](Screenshots/backend-runHTTP.png)
 
 
 ## 🛠 Technologies Used
