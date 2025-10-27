@@ -48,3 +48,68 @@ The total cost includes:
 ```bash
 cd backend/BidCalculator.API
 dotnet run
+
+
+The API will be available at: 
+http://localhost:5000/api/fees/calculate
+
+📬 API Endpoint
+
+POST /api/fees/calculate
+
+Request Body:
+{
+  "price": 1000,
+  "type": "Common"
+}
+
+Response:
+{
+  "basicFee": 50,
+  "specialFee": 20,
+  "associationFee": 10,
+  "storageFee": 100,
+  "total": 1180
+}
+
+🧪 Running Unit Tests
+cd backend/BidCalculator.Tests
+dotnet test
+
+Test Coverage
+
+    ✅ FeeCalculatorService integration tests
+
+    ✅ Individual fee calculators
+
+    ✅ Edge cases (min/max fees, price thresholds)
+
+
+📸 Screenshots
+
+    These screenshots demonstrate the backend in action using .http files in Visual Studio Code.
+
+| HTTP Request | JSON Response |
+|--------------|---------------|
+| `POST /api/fees/calculate`<br>Body:<br>`{ "price": 1000, "type": "Common" }` | `{ "basicFee": 50, "specialFee": 20, "associationFee": 10, "storageFee": 100, "total": 1180 }` |
+
+
+
+🛠 Technologies Used
+
+    ASP.NET Core Web API
+
+    C# 10
+
+    xUnit
+
+    Moq
+
+    FluentAssertions
+
+
+📁 Repository
+
+GitHub: 
+    https://github.com/GregHowe/bid-calculation-tool
+
