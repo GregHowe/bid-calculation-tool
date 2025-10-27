@@ -79,8 +79,10 @@ Response:
 ```
 
 🧪 Running Unit Tests
+```bash
 cd backend/BidCalculator.Tests
 dotnet test
+```
 
 ## Test Coverage
 
