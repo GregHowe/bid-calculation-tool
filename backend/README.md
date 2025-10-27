@@ -45,7 +45,7 @@ The total cost includes:
 
 ### ▶️ Start the API
 
-```bash
+bash
 cd backend/BidCalculator.API
 dotnet run
 
