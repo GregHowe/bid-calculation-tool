@@ -47,7 +47,7 @@ const totalCost = ref(0)
 const feesReady = computed(() =>
   vehiclePrice.value !== null &&
   vehiclePrice.value > 0 &&
-  vehicleType.value !== ''
+  vehicleType.value !== null
 )
 
 watch([vehiclePrice, vehicleType], async () => {
