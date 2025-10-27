@@ -1,14 +1,14 @@
-# Bid Calculation Tool – Backend
+# 🧾 Bid Calculation Tool – Backend
 
 This is the backend component of the **Bid Calculation Tool**, a full-stack web application designed to calculate the total cost of a vehicle at auction. It dynamically computes all applicable fees based on the vehicle's price and type (Common or Luxury).
 
 ---
 
-## 📐 Architecture Overview
+## 🧱 Architecture Overview
 
-The backend is built using **ASP.NET Core Web API**, following clean architecture principles and object-oriented design. It separates fee calculations into dedicated services for clarity and testability.
+The backend is built using **ASP.NET Core Web API**, following clean architecture principles and object-oriented design. Fee calculations are encapsulated in dedicated services for clarity, scalability, and testability.
 
-### Fee Calculators:
+### 🔧 Fee Calculators
 
 - `BasicFeeCalculator`
 - `SpecialFeeCalculator`
@@ -19,7 +19,7 @@ These are injected into the main `FeeCalculatorService`, which orchestrates the 
 
 ---
 
-## 🧮 Fee Calculation Logic
+## 📊 Fee Calculation Logic
 
 The total cost includes:
 
@@ -36,18 +36,19 @@ The total cost includes:
 
 ---
 
-## 🚀 How to Run the Backend
+## 🚀 Running the Backend
 
-### Prerequisites
+### 🔍 Prerequisites
 
 - [.NET SDK 7.0+](https://dotnet.microsoft.com/download)
-- Visual Studio or VS Code
+- Visual Studio or Visual Studio Code
 
-### Run the API
+### ▶️ Start the API
 
 ```bash
 cd backend/BidCalculator.API
 dotnet run
+
 
 
 The API will be available at: 
