@@ -56,7 +56,7 @@ http://localhost:5000/api/fees/calculate
 
 ## 📬 API Endpoint
 
-POST /api/fees/calculate
+POST `/api/fees/calculate`
 
 ### Example Request Body
 
