@@ -110,6 +110,8 @@ npx vitest --watch
 ### Validation Error — Missing Vehicle Type
 ![Validation Type](../screenshots/frontEndValidVehicleType.png)
 
+### UnitTest-IntegrationTest
+![Test Coverage — Unit & Integration](../screenshots/frontEndUnitTest-IntegrationTest.png)
 
 ## 🧠 Architecture Notes
 
