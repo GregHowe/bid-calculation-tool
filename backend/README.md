@@ -94,7 +94,7 @@ dotnet test
 
 ## 📸 Screenshots
 
-    These screenshots demonstrate the backend in action using .http files in Visual Studio Code.
+backend in action using .http files in Visual Studio Code.
 
 | HTTP Request | JSON Response |
 |--------------|---------------|
@@ -103,7 +103,8 @@ dotnet test
 ![HttpTesting](../screenshots/backendRunHTTP.png)
 
 
-Unit Testings
+Unit Testings running in Visual Studio Code
+
 ![HttpTesting](../screenshots/backendUnitTesting.png)
 
 
