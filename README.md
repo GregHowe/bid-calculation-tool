@@ -47,7 +47,7 @@ The backend handles fee calculations, while the frontend provides a user-friendl
 - Node.js + npm
 - Visual Studio or VS Code
 
-### ▶️ Backend
+## ▶️ Backend
 
 ```bash
 cd backend/BidCalculator.API
@@ -56,7 +56,7 @@ dotnet run
 
 API available at: http://localhost:5000/api/FeeCalculator
 
-### ▶️ Frontend
+## ▶️ Frontend
 
 ```bash
 cd frontend
@@ -74,14 +74,14 @@ cd backend/BidCalculator.Tests
 dotnet test
 ```
 
-### Frontend
+## Frontend
 ```bash
 npx vitest run
 ```
 
 Includes unit and integration tests. End-to-end tests are planned using Cypress or Playwright.
 
-### 📁 Environment Setup
+## 📁 Environment Setup
 
 Create a `.env` file in the frontend root:
 
@@ -92,11 +92,11 @@ VITE_STORAGE_FEE=100
 
 Note: VITE_STORAGE_FEE is used only for display purposes in the UI. The actual fee is calculated by the backend.
 
-### 📸 Screenshots
+## 📸 Screenshots
 
-Screenshots of both frontend and backend in action are available in the /screenshots folder.
+Screenshots of both frontend and backend in action are available in the `/screenshots` folder.
 
-### 📌 Production Considerations
+## 📌 Production Considerations
 
 If this were production-ready, I would:
 
@@ -116,7 +116,7 @@ If this were production-ready, I would:
 
     Use environment-based configuration and secrets management
 
-### 📂 Repository
+## 📂 Repository
 
 GitHub:
 https://github.com/GregHowe/bid-calculation-tool
