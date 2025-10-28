@@ -88,8 +88,9 @@ Create a `.env` file in the frontend root:
 VITE_API_URL=http://localhost:5120/api
 VITE_STORAGE_FEE=100
 ```
-These variables configure the backend endpoint and the default storage fee.
+These variables configure the backend endpoint and the default storage fee.  
 Note: `VITE_STORAGE_FEE` is used to immediately display the storage fee in the UI before the backend response arrives. Since the fee is fixed and doesn't depend on vehicle data, it's safe to preload it from the environment. This improves perceived performance and ensures consistency even if the backend is slow or temporarily unavailable.
+
 
 ## 📸 Screenshots
 
