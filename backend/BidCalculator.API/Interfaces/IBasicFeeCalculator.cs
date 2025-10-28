@@ -1,6 +1,6 @@
 namespace BidCalculator.API.Interfaces;
 
-    using BidCalculator.API.Models;
+using BidCalculator.API.Models;
 
     public interface IBasicFeeCalculator
     {
