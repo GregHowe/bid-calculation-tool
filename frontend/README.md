@@ -89,3 +89,44 @@ Or watch mode:
 bash
 npx vitest --watch
 
+## 📸 Screenshots
+
+    Place your screenshots in a /screenshots folder and update the filenames below.
+
+Initial View
+
+Valid Input with Calculated Fees
+
+Validation Errors
+
+## 🧠 Architecture Notes
+
+This frontend follows clean code principles:
+
+    KISS: Simple and readable logic
+
+    DRY: Shared logic extracted to useFeeCalculator.ts
+
+    SOLID: Separation of concerns between UI and business logic
+
+    Environment config: No hardcoded URLs or constants
+
+    Scoped components: Each UI element is modular and testable
+
+## 📌 Production Considerations
+
+As requested in the challenge PDF, here are notes on compromises and improvements:
+
+    If this were production-ready, I would:
+
+    Add loading indicators and accessibility enhancements
+
+    Improve responsive layout for mobile devices
+
+    Add form reset and confirmation UX
+
+    Validate backend responses more strictly
+
+    Add E2E tests with Cypress or Playwright
+
+    Use centralized error handling and logging
