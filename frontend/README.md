@@ -35,3 +35,17 @@ Built with **Vue 3 + TypeScript + Vite**, this UI communicates with a backend AP
 
 ## 📁 Project Structure
 
+```plaintext
+src/
+├── components/
+│   ├── FeeCalculator.vue
+│   └── FeeItem.vue
+├── composables/
+│   └── useFeeCalculator.ts
+├── style.css
+├── App.vue
+└── main.ts
+tests/
+└── FeeCalculator.spec.ts
+.env
+
