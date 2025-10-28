@@ -62,6 +62,7 @@ VITE_API_URL=http://localhost:5120/api
 VITE_STORAGE_FEE=100
 ```
 These variables configure the backend endpoint and default storage fee.
+Note: `VITE_STORAGE_FEE` is used only for display purposes in the UI. The actual fee is calculated by the backend.
 
 ## 🚀 Getting Started
 ```bash
@@ -81,6 +82,8 @@ Unit tests are written using Vitest and cover:
     Reset behavior
 
     Component rendering and integration
+
+End-to-end tests are planned using Cypress or Playwright, but are not yet implemented.    
 
 To run tests:
 ```bash
@@ -126,6 +129,9 @@ This frontend follows clean code principles:
     Environment config: No hardcoded URLs or constants
 
     Scoped components: Each UI element is modular and testable
+
+    Composables: Business logic is extracted into reusable functions (e.g. useFeeCalculator), promoting separation of concerns and testability
+
 
 ## 📌 Production Considerations
 

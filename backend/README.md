@@ -6,7 +6,8 @@ This is the backend component of the **Bid Calculation Tool**, a full-stack web 
 
 ## 🧱 Architecture Overview
 
-The backend is built using **ASP.NET Core Web API**, following clean architecture principles and object-oriented design. Fee calculations are encapsulated in dedicated services for clarity, scalability, and testability.
+The backend is built using **ASP.NET Core Web API**, following clean architecture principles and object-oriented design. Fee calculations are encapsulated in dedicated services for clarity, scalability, and testability. These services are injected via **dependency injection**, allowing loose coupling and easier testing.
+
 
 ### 🔧 Fee Calculators
 
@@ -51,11 +52,11 @@ dotnet run
 ```
 
 The API will be available at: 
-http://localhost:5000/api/fees/calculate
+http://localhost:5000/api/FeeCalculator
 
 ## 📬 API Endpoint
 
-POST `/api/fees/calculate`
+POST `/api/FeeCalculator`
 
 Request:
 
