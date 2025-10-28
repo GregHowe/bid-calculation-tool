@@ -46,6 +46,7 @@ src/
 ├── App.vue
 └── main.ts
 tests/
+├── unit/
 └── FeeCalculator.spec.ts
 .env
 
