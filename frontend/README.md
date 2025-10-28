@@ -133,14 +133,18 @@ As requested in the challenge PDF, here are notes on compromises and improvement
 
     If this were production-ready, I would:
 
-    Add loading indicators and accessibility enhancements
+    Add loading indicators for better UX during API calls
 
-    Improve responsive layout for mobile devices
+    Improve accessibility (ARIA roles, keyboard navigation, screen reader support)
 
-    Add form reset and confirmation UX
+    Enhance responsive layout for mobile and tablet devices
 
-    Validate backend responses more strictly
+    Handle API errors gracefully with user-friendly messages
 
-    Add E2E tests with Cypress or Playwright
+    Implement centralized error handling using global interceptors or composables
 
-    Use centralized error handling and logging
+    Add end-to-end tests using Cypress or Playwright
+
+    Optimize performance with lazy loading and code splitting
+
+    Apply security best practices (e.g. sanitize inputs, prevent XSS)
