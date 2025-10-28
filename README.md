@@ -85,8 +85,10 @@ Includes unit and integration tests. End-to-end tests are planned using Cypress 
 
 Create a `.env` file in the frontend root:
 
+```env
 VITE_API_URL=http://localhost:5000/api
 VITE_STORAGE_FEE=100
+```
 
 Note: VITE_STORAGE_FEE is used only for display purposes in the UI. The actual fee is calculated by the backend.
 
