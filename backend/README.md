@@ -103,8 +103,7 @@ backend in action using .http files in Visual Studio Code.
 ![HttpTesting](../screenshots/backendRunHTTP.png)
 
 
-
-Backend Unit Test Results — Full Pass
+Backend Unit and Integration Test Results — Full Pass
 
 ![HttpTesting](../screenshots/backendUnitTesting.png)
 
