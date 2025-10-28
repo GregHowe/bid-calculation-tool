@@ -27,7 +27,7 @@ Built with **Vue 3 + TypeScript + Vite**, this UI communicates with a backend AP
   - Fixed storage fee
   - Total cost
 - Input validation with error messages
-- Success message with icon and fade-in animation
+- Success message
 - Responsive layout and centralized styling
 - Environment variables for configuration
 
@@ -61,8 +61,8 @@ Create a `.env` file in the root of the project:
 VITE_API_URL=http://localhost:5120/api
 VITE_STORAGE_FEE=100
 ```
-These variables configure the backend endpoint and default storage fee.
-Note: `VITE_STORAGE_FEE` is used only for display purposes in the UI. The actual fee is calculated by the backend.
+These variables configure the backend endpoint and the default storage fee.
+Note: `VITE_STORAGE_FEE` is used to immediately display the storage fee in the UI before the backend response arrives. Since the fee is fixed and doesn't depend on vehicle data, it's safe to preload it from the environment. This improves perceived performance and ensures consistency even if the backend is slow or temporarily unavailable.
 
 ## 🚀 Getting Started
 ```bash
