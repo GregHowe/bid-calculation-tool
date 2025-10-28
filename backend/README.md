@@ -132,18 +132,12 @@ As requested in the challenge PDF, here are notes on compromises and improvement
 
     If this were production-ready, I would:
 
-    Add loading indicators and accessibility enhancements
-
     Secure endpoints with authentication and authorization
 
     Validate incoming requests with data annotations or FluentValidation
 
     Use environment-based configuration and secrets management
 
-    Add retry policies and resilience for external dependencies
-
     Optimize performance with caching and async patterns
 
     Add health checks and monitoring endpoints
-    
-    Implement rate limiting and request throttling
