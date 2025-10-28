@@ -95,11 +95,25 @@ npx vitest --watch
 
  Place your screenshots in a `/screenshots` folder and update the filenames below.
 
-Initial View
+Initial Page
 
-Valid Input with Calculated Fees
+![HttpTesting](../screenshots/frontEndInitPage.png)
 
-Validation Errors
+Success Common Calculation
+
+![HttpTesting](../screenshots/frontEndSuccessCommon.png)
+
+Success Luxury Calculation
+
+![HttpTesting](../screenshots/frontEndSuccessLuxury.png)
+
+Validation Vehicle Price
+
+![HttpTesting](../screenshots/frontEndValidPrice.png)
+
+Validation Vehicle Type
+
+![HttpTesting](../screenshots/frontEndValidVehicleType.png)
 
 ## 🧠 Architecture Notes
 
