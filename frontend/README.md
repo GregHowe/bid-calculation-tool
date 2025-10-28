@@ -49,4 +49,43 @@ tests/
 ├── unit/
 │   └── FeeCalculator.spec.ts
 .env
+```
+
+---
+
+## ⚙️ Environment Setup
+
+Create a `.env` file in the root of the project:
+
+```env
+VITE_API_URL=http://localhost:5120/api
+VITE_STORAGE_FEE=100
+```
+These variables configure the backend endpoint and default storage fee.
+
+## 🚀 Getting Started
+bash
+npm install
+npm run dev
+
+Then open https://localhost:5173/  in your browser.
+
+## 🧪 Testing
+Unit tests are written using Vitest and cover:
+
+    Fee calculation logic
+
+    Input validation
+
+    Reset behavior
+
+    Component rendering and integration
+
+To run tests:
+bash
+npx vitest run
+
+Or watch mode:
+bash
+npx vitest --watch
 
