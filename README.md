@@ -19,8 +19,8 @@ The backend handles fee calculations, while the frontend provides a user-friendl
 
 | Layer     | Technologies Used                                      |
 |-----------|--------------------------------------------------------|
-| Frontend  | Vue 3, TypeScript, Vite, Vitest, @vue/test-utils       |
-| Backend   | ASP.NET Core Web API, C# 10, xUnit, Moq, FluentAssertions |
+| 🖥️ [Frontend README](./frontend/README.md)    | Vue 3, TypeScript, Vite, Vitest, @vue/test-utils       |
+| 🛠️ [Backend README](./backend/README.md)   | ASP.NET Core Web API, C# 10, xUnit, Moq, FluentAssertions |
 
 ---
 
