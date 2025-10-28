@@ -9,7 +9,7 @@ This is a full-stack web application that allows users to calculate the total co
 The project is divided into two main components:
 
 - **[Frontend](./frontend/README.md)**: Built with Vue 3 + TypeScript + Vite  
-- **Backend**: Built with ASP.NET Core Web API
+- **[Backend](./backend/README.md)**: Built with ASP.NET Core Web API
 
 The backend handles fee calculations, while the frontend provides a user-friendly interface for input and result display.
 
@@ -47,7 +47,7 @@ The backend handles fee calculations, while the frontend provides a user-friendl
 - Node.js + npm
 - Visual Studio or VS Code
 
-## ▶️ Backend
+## ▶️ [Backend](./backend/README.md)
 
 ```bash
 cd backend/BidCalculator.API
