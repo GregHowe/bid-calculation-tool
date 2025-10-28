@@ -9,11 +9,13 @@ public class SpecialFeeCalculator : ISpecialFeeCalculator
 {
     public decimal Calculate(decimal price, VehicleType type)
     {
-        return type switch
+        var fee = type switch
         {
             VehicleType.Common => price * 0.02m,
             VehicleType.Luxury => price * 0.04m,
             _ => throw new ArgumentOutOfRangeException(nameof(type), "Unknown vehicle type")
         };
+
+        return Math.Round(fee, 2, MidpointRounding.AwayFromZero);
     }
 }

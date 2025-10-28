@@ -40,7 +40,7 @@ namespace BidCalculator.API.Services
             decimal storageFee = _storageFeeCalculator.Calculate();
 
             // Total
-            decimal total = price + basicFee + specialFee + associationFee + storageFee;
+            decimal total = Math.Round(price + basicFee + specialFee + associationFee + storageFee, 2, MidpointRounding.AwayFromZero);
 
             return new FeeResult
             {

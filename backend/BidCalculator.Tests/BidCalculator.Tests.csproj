@@ -24,4 +24,8 @@
     <ProjectReference Include="..\BidCalculator.API\BidCalculator.API.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Testing" Version="9.0.10" />
+  </ItemGroup>
+
 </Project>

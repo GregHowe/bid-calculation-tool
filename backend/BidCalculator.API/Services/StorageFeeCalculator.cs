@@ -2,6 +2,6 @@ public class StorageFeeCalculator : IStorageFeeCalculator
 {
     public decimal Calculate()
     {
-        return 100m;
+        return Math.Round(100m, 2, MidpointRounding.AwayFromZero);
     }
 }

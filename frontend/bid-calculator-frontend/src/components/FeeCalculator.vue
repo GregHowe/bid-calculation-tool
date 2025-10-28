@@ -1,7 +1,9 @@
 <template>
   <div class="fee-calculator">
     <label for="price">Vehicle Price:</label>
-    <input type="number" id="price" v-model="vehiclePrice" min="1" placeholder="Enter price" />
+    <input   type="number"   id="price"   v-model="vehiclePrice"   min="1"  placeholder="Enter price"  @keydown="blockInvalidKeys"
+/>
+
     <p v-if="vehiclePriceError" class="error-message">❌ Enter a valid price.</p>
 
     <label for="type">Vehicle Type:</label>
@@ -71,4 +73,13 @@ watch([vehiclePrice, vehicleType], async () => {
 
    
 })
+
+function blockInvalidKeys(e: KeyboardEvent) {
+  const invalidKeys = ['e', 'E', '+', '-', '.']
+  if (invalidKeys.includes(e.key)) {
+    e.preventDefault()
+  }
+}
+
+
 </script>

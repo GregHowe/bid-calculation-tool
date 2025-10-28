@@ -11,11 +11,14 @@ public class BasicFeeCalculator : IBasicFeeCalculator
     {
         var fee = price * 0.10m;
 
-        return type switch
+        var clamped = type switch
         {
             VehicleType.Common => Math.Clamp(fee, 10m, 50m),
             VehicleType.Luxury => Math.Clamp(fee, 25m, 200m),
             _ => throw new ArgumentOutOfRangeException(nameof(type), "Unknown vehicle type")
         };
+
+        return Math.Round(clamped, 2, MidpointRounding.AwayFromZero);
     }
+
 }
