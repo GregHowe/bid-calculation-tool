@@ -45,11 +45,10 @@ The total cost includes:
 
 ## ▶️ Start the API
 
-bash
+```bash
 cd backend/BidCalculator.API
 dotnet run
-
-
+```
 
 The API will be available at: 
 http://localhost:5000/api/fees/calculate

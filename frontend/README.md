@@ -64,9 +64,10 @@ VITE_STORAGE_FEE=100
 These variables configure the backend endpoint and default storage fee.
 
 ## 🚀 Getting Started
-bash
+```bash
 npm install
 npm run dev
+```
 
 Then open https://localhost:5173/  in your browser.
 
@@ -82,16 +83,17 @@ Unit tests are written using Vitest and cover:
     Component rendering and integration
 
 To run tests:
-bash
+```bash
 npx vitest run
-
+```
 Or watch mode:
-bash
+```bash
 npx vitest --watch
+```
 
 ## 📸 Screenshots
 
-    Place your screenshots in a /screenshots folder and update the filenames below.
+ Place your screenshots in a `/screenshots` folder and update the filenames below.
 
 Initial View
 
