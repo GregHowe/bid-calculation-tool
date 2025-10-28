@@ -8,7 +8,7 @@ This is a full-stack web application that allows users to calculate the total co
 
 The project is divided into two main components:
 
-- **Frontend**: Built with Vue 3 + TypeScript + Vite  
+- **[Frontend](./frontend/README.md)**: Built with Vue 3 + TypeScript + Vite  
 - **Backend**: Built with ASP.NET Core Web API
 
 The backend handles fee calculations, while the frontend provides a user-friendly interface for input and result display.
@@ -19,8 +19,8 @@ The backend handles fee calculations, while the frontend provides a user-friendl
 
 | Layer     | Technologies Used                                      |
 |-----------|--------------------------------------------------------|
-| 🖥️ [Frontend README](./frontend/README.md)    | Vue 3, TypeScript, Vite, Vitest, @vue/test-utils       |
-| 🛠️ [Backend README](./backend/README.md)   | ASP.NET Core Web API, C# 10, xUnit, Moq, FluentAssertions |
+| 🖥️ [Frontend](./frontend/README.md)    | Vue 3, TypeScript, Vite, Vitest, @vue/test-utils       |
+| 🛠️ [Backend](./backend/README.md)   | ASP.NET Core Web API, C# 10, xUnit, Moq, FluentAssertions |
 
 ---
 
@@ -56,7 +56,7 @@ dotnet run
 
 API available at: http://localhost:5120/api/FeeCalculator
 
-## ▶️ Frontend
+## ▶️ [Frontend](./frontend/README.md)
 
 ```bash
 cd frontend
@@ -73,7 +73,7 @@ cd backend/BidCalculator.Tests
 dotnet test
 ```
 
-#### Frontend
+#### [Frontend](./frontend/README.md)
 ```bash
 npx vitest run
 ```
