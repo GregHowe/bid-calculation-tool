@@ -104,7 +104,7 @@ dotnet test
 
 
 Unit Testings
-![HttpTesting](../screenshots/backendUnitTesting.png.png)
+![HttpTesting](../screenshots/backendUnitTesting.png)
 
 
 ## 🛠 Technologies Used
