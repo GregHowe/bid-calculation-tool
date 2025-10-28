@@ -67,14 +67,13 @@ npm run dev
 App available at: 
 http://localhost:5173
 
-🧪 Testing
-Backend
+🧪 Testing Backend
 ```bash
 cd backend/BidCalculator.Tests
 dotnet test
 ```
 
-## Frontend
+### Frontend
 ```bash
 npx vitest run
 ```
