@@ -84,6 +84,8 @@ Unit tests are written using Vitest and cover:
 
     Component rendering and integration
 
+    Preventing negative input
+
 End-to-end tests are planned using Cypress or Playwright, but are not yet implemented.    
 
 To run tests:
