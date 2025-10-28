@@ -57,27 +57,34 @@ dotnet run
 API available at: http://localhost:5000/api/FeeCalculator
 
 ### ▶️ Frontend
-bash
 
+```bash
 cd frontend
 npm install
 npm run dev
+```
 
-App available at: http://localhost:5173
+App available at: 
+http://localhost:5173
 
 🧪 Testing
 Backend
-
+```bash
 cd backend/BidCalculator.Tests
 dotnet test
+```
 
+### Frontend
+```bash
 npx vitest run
+```
 
 Includes unit and integration tests. End-to-end tests are planned using Cypress or Playwright.
 
 ### 📁 Environment Setup
 
-Create a .env file in the frontend root:
+Create a `.env` file in the frontend root:
+
 VITE_API_URL=http://localhost:5000/api
 VITE_STORAGE_FEE=100
 
