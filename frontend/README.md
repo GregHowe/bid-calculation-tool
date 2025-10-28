@@ -95,25 +95,21 @@ npx vitest --watch
 
  Place your screenshots in a `/screenshots` folder and update the filenames below.
 
-Initial Page
+### Initial View
+![Initial View](../screenshots/frontend-initial-view.png)
 
-![HttpTesting](../screenshots/frontEndInitPage.png)
+### Common Vehicle — Successful Calculation
+![Success Common](../screenshots/frontend-success-common.png)
 
-Success Common Calculation
+### Luxury Vehicle — Successful Calculation
+![Success Luxury](../screenshots/frontend-success-luxury.png)
 
-![HttpTesting](../screenshots/frontEndSuccessCommon.png)
+### Validation Error — Missing Price
+![Validation Price](../screenshots/frontend-error-price.png)
 
-Success Luxury Calculation
+### Validation Error — Missing Vehicle Type
+![Validation Type](../screenshots/frontend-error-vehicle-type.png)
 
-![HttpTesting](../screenshots/frontEndSuccessLuxury.png)
-
-Validation Vehicle Price
-
-![HttpTesting](../screenshots/frontEndValidPrice.png)
-
-Validation Vehicle Type
-
-![HttpTesting](../screenshots/frontEndValidVehicleType.png)
 
 ## 🧠 Architecture Notes
 
