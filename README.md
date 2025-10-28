@@ -95,6 +95,12 @@ Note: VITE_STORAGE_FEE is used only for display purposes in the UI. The actual f
 
 Screenshots of both frontend and backend in action are available in the `/screenshots` folder.
 
+### Initial View
+![Initial View](./screenshots/frontEndInitPage.png)
+
+### Run HTTP
+![HttpTesting](./screenshots/backendRunHTTP.png)
+
 ## 📌 Production Considerations
 
 If this were production-ready, I would:
