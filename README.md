@@ -54,7 +54,7 @@ cd backend/BidCalculator.API
 dotnet run
 ```
 
-API available at: http://localhost:5000/api/FeeCalculator
+API available at: http://localhost:5120/api/FeeCalculator
 
 ## ▶️ Frontend
 
@@ -86,7 +86,7 @@ Includes unit and integration tests. End-to-end tests are planned using Cypress 
 Create a `.env` file in the frontend root:
 
 ```env
-VITE_API_URL=http://localhost:5000/api
+VITE_API_URL=http://localhost:5120/api
 VITE_STORAGE_FEE=100
 ```
 
