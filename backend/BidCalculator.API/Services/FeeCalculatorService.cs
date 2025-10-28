@@ -1,8 +1,8 @@
 using BidCalculator.API.Interfaces;
 using BidCalculator.API.Models;
 
-namespace BidCalculator.API.Services
-{
+namespace BidCalculator.API.Services;
+
     public class FeeCalculatorService : IFeeCalculator
     {
         private readonly IBasicFeeCalculator _basicFeeCalculator;
@@ -52,4 +52,4 @@ namespace BidCalculator.API.Services
             };
         }
     }
-}
+

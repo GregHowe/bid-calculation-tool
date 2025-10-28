@@ -1,4 +1,8 @@
-public interface IStorageFeeCalculator
-{
-    decimal Calculate();
-}
+
+
+namespace BidCalculator.API.Interfaces;
+
+    public interface IStorageFeeCalculator
+    {
+        decimal Calculate();
+    }

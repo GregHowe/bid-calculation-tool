@@ -1,4 +1,7 @@
-public interface IAssociationFeeCalculator
+namespace BidCalculator.API.Interfaces
 {
-    decimal Calculate(decimal price);
+public interface IAssociationFeeCalculator
+    {
+        decimal Calculate(decimal price);
+    }
 }

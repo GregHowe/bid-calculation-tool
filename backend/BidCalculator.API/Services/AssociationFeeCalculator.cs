@@ -1,3 +1,7 @@
+using BidCalculator.API.Interfaces;
+
+namespace BidCalculator.API.Services;
+
 public class AssociationFeeCalculator : IAssociationFeeCalculator
 {
     public decimal Calculate(decimal price)

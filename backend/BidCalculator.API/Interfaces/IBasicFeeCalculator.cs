@@ -1,24 +1,8 @@
-using BidCalculator.API.Models;
+namespace BidCalculator.API.Interfaces;
 
-public interface IBasicFeeCalculator
-{
-    decimal Calculate(decimal price, VehicleType type);
-}
+    using BidCalculator.API.Models;
 
-public class BasicFeeCalculator : IBasicFeeCalculator
-{
-    public decimal Calculate(decimal price, VehicleType type)
+    public interface IBasicFeeCalculator
     {
-        var fee = price * 0.10m;
-
-        var clamped = type switch
-        {
-            VehicleType.Common => Math.Clamp(fee, 10m, 50m),
-            VehicleType.Luxury => Math.Clamp(fee, 25m, 200m),
-            _ => throw new ArgumentOutOfRangeException(nameof(type), "Unknown vehicle type")
-        };
-
-        return Math.Round(clamped, 2, MidpointRounding.AwayFromZero);
+        decimal Calculate(decimal price, VehicleType type);
     }
-
-}
