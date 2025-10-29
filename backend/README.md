@@ -52,7 +52,7 @@ dotnet run
 ```
 
 The API will be available at: 
-http://localhost:5000/api/FeeCalculator
+http://localhost:5120/api/FeeCalculator
 
 ## 📬 API Endpoint
 
